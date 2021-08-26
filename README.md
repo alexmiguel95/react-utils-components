@@ -7,8 +7,10 @@
 ---
 &nbsp; 
 ###  Componentes
+* CheckboxBlueWithDescription
+> Um checkbox simples com descricão
 
-
+![](checkbox-blue-with-description.png)
 
 &nbsp;  
 #### Desenvolvido por
