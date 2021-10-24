@@ -2,7 +2,7 @@
 
 |   Descrição	|   Como utilizar 	|
 |---	|---	|
-| Projeto para salvar e reaproveitar componentes React e funções JavaScript. O objetivo desse projeto é poder aproveitar esses componentes em qualquer projeto, basta copiar e fazer pequenas alterações de acordo com o projeto. |  Desenvolvido em ReactJS V17, Node V12 com as bibliotecas: styled-components V5, typescript V4, jwt-decode": 3. Para utiliza-lo localmente, basta clonar o projeto e no terminal digitar **sudo yarn** para instalar todas as depêndencias do projeto, e depois é só executar o comando **yarn start** e o projeto sera aberto no browser default.	|
+| Projeto para salvar e reaproveitar componentes React e funções JavaScript. O objetivo desse projeto é poder aproveitar esses componentes em qualquer projeto, basta copiar e fazer pequenas alterações de acordo com o projeto. |  Desenvolvido em ReactJS V17, Node V12 com as bibliotecas: styled-components V5, typescript V4, jwt-decode V3, axios. Para utiliza-lo localmente, basta clonar o projeto e no terminal digitar **sudo yarn** para instalar todas as depêndencias do projeto, e depois é só executar o comando **yarn start** e o projeto sera aberto no browser default.	|
 
 ---
 &nbsp; 
