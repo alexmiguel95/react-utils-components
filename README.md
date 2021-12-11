@@ -6,6 +6,29 @@
 
 ---
 &nbsp; 
+
+###  Instalar extensões padrões
+> Instala todas as extensões mais usadas no VSCode
+* React-Native/React/Redux snippets for es6/es7
+* vscode-icons (CTLR + Shift + P, digite “icon”, selecione a opção File Icon Theme e selecione a opção VSCode icons)
+* ESLint (monitora o código em tempo real apontando erros e sugerindo boas práticas)
+* TSLint (monitora código TS)
+* Thunder Client (fazer request para API. Para acessar o Environment {{nome_variavel}})
+* vscode-styled-components
+* Auto Rename tag
+* IntelliSense for CSS
+* Auto Close Tag (depois de instalado pressione F1 e Close Tag e clique na opção)
+* Prettier - Code Formatter (CMMD + OPTION + L || CTLR + SHIFT + i) 
+* git lens (mostra quem fez a alteração do código em tempo real)
+* Better Comments
+
+```
+yarn extensions
+```
+
+---
+&nbsp; 
+
 ###  Componentes
 * CheckboxBlueWithDescription
 > Um checkbox simples com descrição
