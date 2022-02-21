@@ -29,10 +29,37 @@ const stringUtils = () => {
         return value.replace(/(.{5})(\d)/, '$1-$2');
     };
 
+    // Credit Card
+   const maskCreditCardNumber = (value: string) => {
+        value = value.replace(/\D/g,"");
+        value = value.replace(/(\d{4})/g, "$1 ");
+        value = value.substring(0, 19);
+      
+        return value;
+      };
+      
+    const maskCreditCardValidity = (value: string) => {
+        value = value.replace(/\D/g,"");
+        value = value.replace(/(\d{2})/g, "$1/");
+        value = value.substring(0, 5);
+      
+        return value;
+      };
+      
+    const maskCardVerificationValue = (value: string) => {
+        value = value.replace(/\D/g,"");
+        value = value.substring(0, 3);
+      
+        return value;
+      };
+
     return {
         phoneMask,
         cellMask,
         zipCodeMask,
+        maskCreditCardNumber,
+        maskCreditCardValidity,
+        maskCardVerificationValue
     };
 };
 
