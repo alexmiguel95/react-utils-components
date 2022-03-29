@@ -114,6 +114,67 @@ const stringUtils = () => {
         return digit1 === digits[1];
     };
 
+    const validateCPF = (value?: string) => {
+        let sum = 0;
+        let rest;
+
+        value = value?.replace(/[^\d]+/g,'');
+        
+        if (isEmpty(value)) {
+            return false;
+        }
+
+        if (
+            value === "00000000000" || 
+            value === "11111111111" || 
+            value === "22222222222" || 
+            value === "33333333333" || 
+            value === "44444444444" || 
+            value === "55555555555" || 
+            value === "66666666666" || 
+            value === "77777777777" || 
+            value === "88888888888" || 
+            value === "99999999999"
+        ) {
+            return false;
+        }
+    		
+        for (let i = 1; i <= 9; i++) {
+            sum = sum + Number(value!.substring(i - 1, i)) * (11 - i);
+        }
+
+        rest = sum % 11;
+
+        if (rest === 10 || rest === 11 || rest < 2) {
+            rest = 0;
+        } else {
+            rest = 11 - rest;
+        }
+
+        if (rest !== Number(value!.substring(9, 10))) {
+            return false;
+        }
+
+        sum = 0;
+        for (let i = 1; i <= 10; i++) {
+            sum = sum + Number(value!.substring(i - 1, i)) * (12 - i);
+        }
+
+        rest = sum % 11;
+
+        if (rest === 10 || rest === 11 || rest < 2) {
+            rest = 0;
+        } else {
+            rest = 11 - rest;
+        }
+
+        if (rest !== Number(value!.substring(10, 11))) {
+            return false;
+        }
+
+        return true;
+    }
+
     return {
         phoneMask,
         cellMask,
@@ -121,7 +182,8 @@ const stringUtils = () => {
         maskCreditCardNumber,
         maskCreditCardValidity,
         maskCardVerificationValue,
-        validateCNPJ
+        validateCNPJ,
+        validateCPF
     };
 };
 
